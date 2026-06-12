@@ -10,8 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4ccba240a21e4f448be28bb62e55a96a, type: 3}
-  m_Name: Lavenders
+  m_Name: Tulips
   m_EditorClassIdentifier: Assembly-CSharp::FlowerData
-  flowerID: lavenders
-  flowerName: Lavenders
-  flowerSprite: {fileID: 21300000, guid: b669b87cc83ea1848966ae01b8508222, type: 3}
+  flowerID: tulips
+  flowerName: Tulips
+  flowerSprite: {fileID: 21300000, guid: 5b214a8c9b1ea3d4d866328367bcf6dd, type: 3}
