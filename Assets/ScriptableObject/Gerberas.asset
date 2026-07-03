@@ -15,3 +15,4 @@ MonoBehaviour:
   flowerID: gerberas
   flowerName: Gerberas
   flowerSprite: {fileID: 21300000, guid: 3e28d55835bed2f4dbc4c4a743965232, type: 3}
+  singleFlowerSprite: {fileID: 21300000, guid: 73077c3ce617ae945a6dc0190e27616b, type: 3}

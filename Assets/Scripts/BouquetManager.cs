@@ -4,7 +4,10 @@ using System.Collections.Generic;
 public class BouquetManager : MonoBehaviour
 {
     public static BouquetManager Instance { get; private set; }
-    [SerializeField] private List<Transform> points;
+    [SerializeField] private List<Transform> flowerSnapPoints;
+    [SerializeField] private GameObject snapFlowerPrefab;
+    private Dictionary<Transform, SnapFlowerInstance> occupiedSnaps = new();
+    //dictionary memasang antara snapflowerinstance dengan titiknya (transform)
     private int pointIndex = 0;
     
     void Awake()
@@ -15,22 +18,37 @@ public class BouquetManager : MonoBehaviour
 
     public void AddFlower(FlowerItem flower)
     {
-        if (pointIndex < points.Count)
+        Transform freePoint = null;
+        foreach (var point in flowerSnapPoints)
         {
-            Transform targetPoint = points[pointIndex];
-            flower.transform.position = targetPoint.position;
-            flower.transform.SetParent(targetPoint);
-            BoxCollider2D col = flower.GetComponent<BoxCollider2D>();
-            if (col != null)
+            if (!occupiedSnaps.ContainsKey(point))
             {
-                col.enabled = false;
+                freePoint = point;
+                break;
             }
-            pointIndex++;
-            Debug.Log("Added Flower");
         }
-        else
+
+        if (freePoint == null)
         {
-            Debug.Log("Slot is Full");
+            Debug.Log("Slot is full");
+            return;
+        }
+        
+        GameObject instance = Instantiate(snapFlowerPrefab, freePoint.position, Quaternion.identity, freePoint);
+        SnapFlowerInstance snapFlower = instance.GetComponent<SnapFlowerInstance>();
+        
+        Sprite singleSprite = flower.Data.SingleFlowerSprite != null 
+            ? flower.Data.SingleFlowerSprite : flower.Data.FlowerSprite;
+        
+        snapFlower.Initialize(flower, freePoint, singleSprite);
+        occupiedSnaps[freePoint] = snapFlower;
+    }
+
+    public void RemoveFromSnapPoint(Transform point)
+    {
+        if (occupiedSnaps.ContainsKey(point))
+        {
+            occupiedSnaps.Remove(point);
         }
     }
 }

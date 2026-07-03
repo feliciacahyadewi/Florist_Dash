@@ -15,3 +15,4 @@ MonoBehaviour:
   flowerID: roses
   flowerName: Roses
   flowerSprite: {fileID: 21300000, guid: 52c5df4c258be214bb8e97c87ddce822, type: 3}
+  singleFlowerSprite: {fileID: 21300000, guid: 0114653be03fe694fa520f6e0dd4ecbc, type: 3}

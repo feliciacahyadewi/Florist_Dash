@@ -150,8 +150,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b87292faf46a9124d9734a25eed36ff9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::FlowerItem
-  flowerData: {fileID: 11400000, guid: 8528354e76402f74b95496452f29d53a, type: 2}
   targetSize: 4
+  flowerData: {fileID: 11400000, guid: 8528354e76402f74b95496452f29d53a, type: 2}
+  stock: 5
 --- !u!61 &14562786
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -316,10 +317,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b39de4a11cbd374b8856bfa84ef3b22, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BouquetManager
-  points:
+  flowerSnapPoints:
   - {fileID: 1185606832}
   - {fileID: 1306876588}
   - {fileID: 2096993273}
+  snapFlowerPrefab: {fileID: 2292322603935827820, guid: 06d586cd10645df4ea5d16a2229016bf, type: 3}
 --- !u!1 &233003078
 GameObject:
   m_ObjectHideFlags: 0
@@ -351,8 +353,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b87292faf46a9124d9734a25eed36ff9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::FlowerItem
-  flowerData: {fileID: 11400000, guid: 9421352bb50ae21439516c088d0d0885, type: 2}
   targetSize: 4
+  flowerData: {fileID: 11400000, guid: 9421352bb50ae21439516c088d0d0885, type: 2}
+  stock: 5
 --- !u!61 &233003080
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -846,8 +849,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b87292faf46a9124d9734a25eed36ff9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::FlowerItem
-  flowerData: {fileID: 11400000, guid: 6d2afa6d7c591a04798439806ce527e2, type: 2}
   targetSize: 4
+  flowerData: {fileID: 11400000, guid: 6d2afa6d7c591a04798439806ce527e2, type: 2}
+  stock: 5
 --- !u!61 &728804246
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1052,13 +1056,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 753261316}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3.23, y: -0.29, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1656755552}
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1595847243}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &849935635
 GameObject:
@@ -1235,13 +1239,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 935481738}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3.75, y: -1.94, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.52, y: -1.6500001, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 728804248}
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1595847243}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1005416700
 GameObject:
@@ -1274,8 +1278,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b87292faf46a9124d9734a25eed36ff9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::FlowerItem
-  flowerData: {fileID: 11400000, guid: a713f9a74e6836947aa5e996de680642, type: 2}
   targetSize: 4
+  flowerData: {fileID: 11400000, guid: a713f9a74e6836947aa5e996de680642, type: 2}
+  stock: 5
 --- !u!61 &1005416702
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1421,7 +1426,7 @@ Transform:
   m_GameObject: {fileID: 1185606831}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.32, y: -0.17, z: 0}
+  m_LocalPosition: {x: 0.29, y: -0.343, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1452,7 +1457,7 @@ Transform:
   m_GameObject: {fileID: 1306876587}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.012, y: -0.161, z: 0}
+  m_LocalPosition: {x: 0.362, y: -0.481, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1542,13 +1547,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1310091116}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 5.65, y: -1.95, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 2.42, y: -1.6600001, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1005416704}
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1595847243}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1370880857
 GameObject:
@@ -1634,13 +1639,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1370880857}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 5.14, y: -0.26, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 1.9099998, y: 0.030000001, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 14562788}
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1595847243}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1448400254
 GameObject:
@@ -1805,13 +1810,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1468672397}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 7.59, y: -1.95, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 4.36, y: -1.6600001, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 233003082}
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1595847243}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1475700331
 GameObject:
@@ -1897,12 +1902,49 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1475700331}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 7.07, y: -0.22, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 3.8400002, y: 0.06999999, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1806304369}
+  m_Father: {fileID: 1595847243}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1595847242
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1595847243}
+  m_Layer: 0
+  m_Name: Flowers
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1595847243
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1595847242}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 3.23, y: -0.29, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 753261318}
+  - {fileID: 1370880859}
+  - {fileID: 1475700333}
+  - {fileID: 935481740}
+  - {fileID: 1310091118}
+  - {fileID: 1468672399}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1656755548
@@ -1936,8 +1978,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b87292faf46a9124d9734a25eed36ff9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::FlowerItem
-  flowerData: {fileID: 11400000, guid: f13a023f1b3d7c34b950c81a3726cd85, type: 2}
   targetSize: 4
+  flowerData: {fileID: 11400000, guid: f13a023f1b3d7c34b950c81a3726cd85, type: 2}
+  stock: 5
 --- !u!61 &1656755550
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2183,8 +2226,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b87292faf46a9124d9734a25eed36ff9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::FlowerItem
-  flowerData: {fileID: 11400000, guid: 5ffd3b18f84a11142b9e3e35849a5391, type: 2}
   targetSize: 4
+  flowerData: {fileID: 11400000, guid: 5ffd3b18f84a11142b9e3e35849a5391, type: 2}
+  stock: 5
 --- !u!61 &1806304367
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2362,7 +2406,7 @@ Transform:
   m_GameObject: {fileID: 2096993272}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.31, y: -0.164, z: 0}
+  m_LocalPosition: {x: 0.243, y: -0.584, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2379,9 +2423,4 @@ SceneRoots:
   - {fileID: 1448400257}
   - {fileID: 474472528}
   - {fileID: 849935637}
-  - {fileID: 753261318}
-  - {fileID: 1370880859}
-  - {fileID: 1475700333}
-  - {fileID: 935481740}
-  - {fileID: 1310091118}
-  - {fileID: 1468672399}
+  - {fileID: 1595847243}
