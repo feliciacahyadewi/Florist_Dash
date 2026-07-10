@@ -1,0 +1,17 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 96d70765f028f664d959154fecc3a256, type: 3}
+  m_Name: Pink
+  m_EditorClassIdentifier: Assembly-CSharp::PaperData
+  paperID: Pink
+  paperSprite: {fileID: 21300000, guid: efce756762e445b4db11d1f51f2c0608, type: 3}
+  snapSprite: {fileID: -1188955630274811480, guid: decf33e051aad064c854bb4ab91f98bb, type: 3}

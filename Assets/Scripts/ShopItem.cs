@@ -10,9 +10,7 @@ public abstract class ShopItem : MonoBehaviour, IPointerClickHandler
     [SerializeField] private float targetSize = 1f;
     protected SpriteRenderer sr;
     protected BoxCollider2D bc;
-
     private Vector3 originalScale;
-
     //variable
     protected abstract Sprite GetSprite();
     protected abstract string GetItemName();
