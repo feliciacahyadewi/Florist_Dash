@@ -116,7 +116,7 @@ public class BouquetManager : MonoBehaviour
 
             foreach (FlowerData placed in placedFlowers)
             {
-                if (!tempRequired.Contains(placed))
+                if (tempRequired.Contains(placed))
                 {
                     tempRequired.Remove(placed);
                 }
