@@ -15,4 +15,6 @@ MonoBehaviour:
   requiredPaper: {fileID: 11400000, guid: c2948c7891d7f9245b346c3aa6763ed4, type: 2}
   requiredFlowers:
   - {fileID: 11400000, guid: a713f9a74e6836947aa5e996de680642, type: 2}
+  - {fileID: 11400000, guid: a713f9a74e6836947aa5e996de680642, type: 2}
+  - {fileID: 11400000, guid: a713f9a74e6836947aa5e996de680642, type: 2}
   finalBouquetSprite: {fileID: -4365049033602724311, guid: 80e8e4282d1405f4fa7baa35410fb2da, type: 3}
