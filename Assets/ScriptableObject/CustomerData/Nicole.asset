@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e4b7cebb12c86554895d13019dedc54c, type: 3}
+  m_Name: Nicole
+  m_EditorClassIdentifier: Assembly-CSharp::CustomerData
+  customerId: nicole
+  customerName: Nicole
+  normalSprite: {fileID: -8442353597118480420, guid: 12f06c22dbd592f40903043f37274bda, type: 3}
+  happySprite: {fileID: 3699702756827221260, guid: 08fcd770107b792439c43edc735cc1c8, type: 3}
+  sadSprite: {fileID: -3681336573592385245, guid: 8ddfad170051b074d84c19950dba7e65, type: 3}
+  orderDialogue: "Got any [Flowername]? Wrap \u2019em in [Papercolor]."
+  correctDialogue: Heh. I appreciate it.
+  wrongDialogue: Nah. Wrong bouquet.

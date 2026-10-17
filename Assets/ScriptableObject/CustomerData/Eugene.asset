@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e4b7cebb12c86554895d13019dedc54c, type: 3}
+  m_Name: Eugene
+  m_EditorClassIdentifier: Assembly-CSharp::CustomerData
+  customerId: eugene
+  customerName: Eugene
+  normalSprite: {fileID: -2159481345377551687, guid: 14ea58e0d92fda64bbf215e6943eacb5, type: 3}
+  happySprite: {fileID: 6096985837902856869, guid: 808c7439d62e64e48aa4b5a2e75c7ba3, type: 3}
+  sadSprite: {fileID: -2778945699663724231, guid: f03277751786a8b4c841a78c43abd12c, type: 3}
+  orderDialogue: '[Flowername]. [Papercolor] wrapping.'
+  correctDialogue: ....It's beautiful, she'll like it.
+  wrongDialogue: These aren't the flowers.

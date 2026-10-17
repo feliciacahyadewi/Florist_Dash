@@ -28,9 +28,17 @@ public class BouquetManager : MonoBehaviour
     [SerializeField] private GameObject btnThrow;
 
     private BouquetRecipeData currentReadyRecipe;
+    private Vector3 initialBouquetPosition;
 
     public PaperData CurrentSelectedPaper { get; private set; }
 
+    private void Start()
+    {
+        if (finalBouquetDisplay != null)
+        {
+            initialBouquetPosition = finalBouquetDisplay.transform.position;
+        }
+    }
     void Awake()
     {
         if (Instance == null) Instance = this;
@@ -106,6 +114,8 @@ public class BouquetManager : MonoBehaviour
                 dimBackground.SetActive(true);
             }
 
+            finalBouquetDisplay.transform.position = initialBouquetPosition;
+            
             finalBouquetDisplay.sprite = matchedRecipe.FinalBouquetSprite;
             SpriteScaleUtility.AdjustScale(finalBouquetDisplay.transform, matchedRecipe.FinalBouquetSprite, 6f);
             finalBouquetDisplay.gameObject.SetActive(true);
@@ -153,10 +163,29 @@ public class BouquetManager : MonoBehaviour
 
     public void GiveBouquet()
     {
-        Debug.Log("The bouquet has been given");
-        ThrowBouquet();
+        if (currentReadyRecipe != null)
+        {
+            btnGive.SetActive(false);
+            btnThrow.SetActive(false);
+            OrderManager.Instance.SubmitOrder(currentReadyRecipe, 
+                finalBouquetDisplay.transform, OnBouquetAccepted, OnBouquetRejected);
+        }
     }
 
+    private void OnBouquetAccepted()
+    {
+        currentReadyRecipe = null;
+        craftingTable.SetActive(true);
+        btnMake.SetActive(true);
+    }
+
+    private void OnBouquetRejected()
+    {
+        btnGive.SetActive(true);
+        btnThrow.SetActive(true);
+        
+    }
+    
     public void ThrowBouquet()
     {
         currentReadyRecipe = null;
@@ -189,9 +218,41 @@ private BouquetRecipeData FindMatchingRecipe()
             placedFlowers.Add(snap.FData);
         }
 
+        if (placedFlowers.Count == 0) return null;
+        
         foreach (BouquetRecipeData recipe in bouquetRecipes)
         {
             if (recipe.RequiredPaper != CurrentSelectedPaper) continue;
+
+            if (recipe.RequiredFlowers.Count == 0) continue;
+            
+            //cek apakah semua bunga di meja jenisnya sama
+            bool placedAllSame = true;
+            FlowerData firstPlacedFlower = placedFlowers[0];
+            foreach (var flower in placedFlowers)
+            {
+                if (flower != firstPlacedFlower)
+                {
+                    placedAllSame = false;
+                    break;
+                }
+            }
+            
+            bool recipeAllSame = true;
+            foreach (var flower in recipe.RequiredFlowers)
+            {
+                if (flower != firstPlacedFlower)
+                {
+                    recipeAllSame = false;
+                    break;
+                }
+            }
+
+            if (placedAllSame && recipeAllSame)
+            {
+                return recipe;
+            }
+            
             if (recipe.RequiredFlowers.Count != placedFlowers.Count) continue;
             
             List<FlowerData> tempRequired = new List<FlowerData>(recipe.RequiredFlowers);

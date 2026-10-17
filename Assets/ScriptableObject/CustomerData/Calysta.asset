@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e4b7cebb12c86554895d13019dedc54c, type: 3}
+  m_Name: Calysta
+  m_EditorClassIdentifier: Assembly-CSharp::CustomerData
+  customerId: calysta
+  customerName: Calysta
+  normalSprite: {fileID: 836985899293716516, guid: 9865b12a5c694e947ab30a4838b24292, type: 3}
+  happySprite: {fileID: -2356936675172346175, guid: 9aa305f1e34b13e4e8310a56646b0252, type: 3}
+  sadSprite: {fileID: -1166831375105952859, guid: fcb7ffc46f8212e41b878f6bc96be0a1, type: 3}
+  orderDialogue: "Excuse me, can you make me a bouquet of [Flowername]? With [Papercolor]
+    wrapping! It\u2019s for Mom, she deserves something pretty!"
+  correctDialogue: Aww, look at it! Mom is going to be so happy! Thank you!
+  wrongDialogue: Wait, those are not it! I need the pretty ones!

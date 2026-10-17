@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e4b7cebb12c86554895d13019dedc54c, type: 3}
+  m_Name: Jason
+  m_EditorClassIdentifier: Assembly-CSharp::CustomerData
+  customerId: jason
+  customerName: Jason
+  normalSprite: {fileID: 7589083582081206176, guid: 974bbdb2a4ddf99488e8b40c7635ef6d, type: 3}
+  happySprite: {fileID: -4617461191153529193, guid: be2b1dd4f3ec62f46aa54f2b65a670d4, type: 3}
+  sadSprite: {fileID: 7024854782280793730, guid: 7d07a6b01a0d05c44b9ba48545d176ee, type: 3}
+  orderDialogue: I want a bouquet full of [Flowername], wrapped with [Papercolor]
+    papers for my wife, please? Make sure you make it beautifully.
+  correctDialogue: "It\u2019s perfect. Thanks! Hahaha!"
+  wrongDialogue: "Uh..I\u2019m sorry, i believe this is not what she wants. Could
+    you please make the bouquet again?"

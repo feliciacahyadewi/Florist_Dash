@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a59e1b7c5c377494a864ee8a48eef253, type: 3}
+  m_Name: Lavender White
+  m_EditorClassIdentifier: Assembly-CSharp::BouquetRecipeData
+  requiredPaper: {fileID: 11400000, guid: c2948c7891d7f9245b346c3aa6763ed4, type: 2}
+  requiredFlowers:
+  - {fileID: 11400000, guid: 9421352bb50ae21439516c088d0d0885, type: 2}
+  - {fileID: 11400000, guid: 9421352bb50ae21439516c088d0d0885, type: 2}
+  - {fileID: 11400000, guid: 9421352bb50ae21439516c088d0d0885, type: 2}
+  finalBouquetSprite: {fileID: 8597265555138175851, guid: 529c489b4429a2245ba233f06fb1ae10, type: 3}
+  orderDescription: 
+  flowerName: lavenders
+  paperColor: white
